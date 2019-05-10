@@ -1,0 +1,1 @@
+{"uuid":"59587a88-a15c-4819-ada5-20047d68334e","name":"twg.entaxy.tests.BaseTest.setUpInParent","description":"","start":1557507936960,"stop":1557507942248,"children":["0eac7e25-747a-4c39-8981-cc979417a684"],"befores":[{"name":"setUpInParent","status":"passed","stage":"finished","description":"","start":1557507936960,"stop":1557507942248}]}

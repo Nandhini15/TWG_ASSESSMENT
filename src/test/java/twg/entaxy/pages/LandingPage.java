@@ -1,6 +1,5 @@
 package twg.entaxy.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,90 +10,80 @@ public class LandingPage {
 
 	@FindBy(xpath = "//span[text()='Sign in with Blockstack']/..")
 	WebElement blockStackElement;
-	
-	@FindBy(xpath="//span[text()='Take it for a test drive']/..")
+
+	@FindBy(xpath = "//span[contains(text(),'Take it for a test drive')]/..")
 	WebElement testDriveElement;
-	
-	@FindBy(name="us-entrypoint-button")
+
+	@FindBy(name = "us-entrypoint-button")
 	WebElement iFrameFeedbackElement;
-	
-	@FindBy(name="us-entrypoint-widgetApp")
+
+	@FindBy(name = "us-entrypoint-widgetApp")
 	WebElement iFrameWidgetElement;
-	
-	@FindBy(xpath="//button[@class='container']")
+
+	@FindBy(xpath = "//button[@class='container']")
 	WebElement feedbackElement;
-	
-	@FindBy(id="FormControl1_input")
+
+	@FindBy(id = "FormControl1_input")
 	WebElement feedbackTitleElement;
-	
-	@FindBy(xpath="//input[@id='FormControl2_input']")
+
+	@FindBy(xpath = "//input[@id='FormControl2_input']")
 	WebElement feedbackEmailElement;
-	
-	@FindBy(id="FormControl4_input")
+
+	@FindBy(id = "FormControl4_input")
 	WebElement feedbackMessageElement;
-	
-	@FindBy(xpath="//button[@type='submit']")
+
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement feedbackSubmitElement;
-	
-	@FindBy(xpath="//span[contains(text(),'Close')]/..")
+
+	@FindBy(xpath = "//span[contains(text(),'Close')]/..")
 	WebElement feedbackCloseElement;
 
 	public LandingPage(WebDriver driver) {
 		this.driver = driver;
 	}
-	
-	public void clickOnBlockStack()
-	{
+
+	public void clickOnBlockStack() {
 		blockStackElement.click();
 	}
-	
-	public void clickOnTestDrive()
-	{
+
+	public void clickOnTestDrive() {
 		testDriveElement.click();
 	}
-	
-	public void clickOnFeedBackElement()
-	{
+
+	public void clickOnFeedBackElement() {
 		driver.switchTo().frame(iFrameFeedbackElement);
 		feedbackElement.click();
 	}
-	
-	public void setFeedbackTitle(String title)
-	{
+
+	public void setFeedbackTitle(String title) {
 		driver.switchTo().frame(iFrameWidgetElement);
 		feedbackTitleElement.sendKeys(title);
 	}
-	
-	public void setFeedbackEmail(String email)
-	{
+
+	public void setFeedbackEmail(String email) {
 
 		feedbackEmailElement.sendKeys(email);
 	}
-	
-	public void setFeedbackMessage(String message)
-	{
+
+	public void setFeedbackMessage(String message) {
 		feedbackMessageElement.sendKeys(message);
 	}
-	
-	public void clickOnFeedbackSubmit()
-	{
+
+	public void clickOnFeedbackSubmit() {
 		feedbackSubmitElement.click();
 	}
-	
-	public void clickOnFeedbackClose()
-	{
+
+	public void clickOnFeedbackClose() {
 		feedbackCloseElement.click();
 	}
-	
-	public String getFeedbackEmail()
-	{
+
+	public String getFeedbackEmail() {
 		driver.switchTo().frame(iFrameWidgetElement);
 		String valueEntry = feedbackEmailElement.getAttribute("value");
 		return valueEntry;
 	}
-	
-	public void submitFeedback(String title, String email, String message)
-	{
+
+	public void submitFeedback(String title, String email, String message) {
 
 		clickOnFeedBackElement();
 		setFeedbackTitle(title);

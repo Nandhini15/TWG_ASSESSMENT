@@ -1,0 +1,1 @@
+{"uuid":"a26137e9-907d-4ed5-b2d9-59e8770aee7f","name":"twg.entaxy.tests.BaseTest.afterMethodInBaseTest","description":"","start":1557507957167,"stop":1557507958029,"children":["f3da615f-7c76-46a0-a2ae-71b28a559cb0"],"afters":[{"name":"afterMethodInBaseTest","status":"passed","stage":"finished","description":"","start":1557507957167,"stop":1557507958029}]}

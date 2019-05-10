@@ -1,11 +1,9 @@
 package twg.entaxy.pages;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -79,10 +77,10 @@ public class BrowserDashboard {
 
 	@FindBy(xpath = "//a[@title='Import transaction']")
 	WebElement importTransactionElement;
-	
-	@FindBy(xpath="//div/ul/div/div/span")
+
+	@FindBy(xpath = "//div/ul/div/div/span")
 	List<WebElement> importTransactionOptionsElement;
-	
+
 	public BrowserDashboard(WebDriver driver) {
 		this.driver = driver;
 	}
@@ -218,12 +216,11 @@ public class BrowserDashboard {
 	public void clickOnImportTransaction() {
 		importTransactionElement.click();
 	}
-	
+
 	public void selectImportTransaction(String option1, String option2, String option3) {
-		for(WebElement element: importTransactionOptionsElement)
-		{
-			if(element.getText().equals(option1)|| element.getText().equals(option2) || element.getText().equals(option3))
-			{
+		for (WebElement element : importTransactionOptionsElement) {
+			if (element.getText().equals(option1) || element.getText().equals(option2)
+					|| element.getText().equals(option3)) {
 				element.click();
 				break;
 			}

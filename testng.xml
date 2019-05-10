@@ -3,6 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
+      <class name="twg.entaxy.tests.BlockstackBrowserTest"/>
       <class name="twg.entaxy.tests.BrowserDashboardTest"/>
       <class name="twg.entaxy.tests.LandingPageTest"/>
     </classes>

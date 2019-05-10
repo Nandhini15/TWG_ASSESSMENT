@@ -1,10 +1,10 @@
 package twg.entaxy.tests;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import junit.framework.Assert;
 import twg.entaxy.pages.LandingPage;
 
 public class LandingPageTest extends BaseTest{
