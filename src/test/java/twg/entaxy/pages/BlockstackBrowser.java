@@ -79,8 +79,8 @@ public class BlockstackBrowser {
 		clickOnCheckAvailability();
 		// setPassword("Anbalagan@007");
 		// setConfirmPassword("Anbalagan@007");
-		clickOnRegisterID();
-		setEmail("123nandhu@gmail.com");
-		clickOnEmailNext();
+		//clickOnRegisterID();
+		//setEmail("123nandhu@gmail.com");
+		//clickOnEmailNext();
 	}
 }
