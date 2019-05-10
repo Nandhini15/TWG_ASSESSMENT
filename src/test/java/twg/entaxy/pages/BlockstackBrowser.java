@@ -3,6 +3,8 @@ package twg.entaxy.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BlockstackBrowser {
 	
@@ -54,6 +56,8 @@ public class BlockstackBrowser {
 	
 	public void setPassword(String password)
 	{
+		WebDriverWait wait = new WebDriverWait(driver, 20);
+		wait.until(ExpectedConditions.elementToBeSelected(createPasswordElement));
 		createPasswordElement.sendKeys(password);
 	}
 	
@@ -83,8 +87,8 @@ public class BlockstackBrowser {
 		setUsername("vino12345");
 		clickOnCheckAvailability();
 		clickOnCheckAvailability();
-		setPassword("Anbalagan@007");
-		setConfirmPassword("Anbalagan@007");
+//		setPassword("Anbalagan@007");
+//		setConfirmPassword("Anbalagan@007");
 		clickOnRegisterID();
 		setEmail("123nandhu@gmail.com");
 		clickOnEmailNext();
