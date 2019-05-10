@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="twg.entaxy.tests.BrowserDashboardTest">
+        <methods>
+          <include name="newAccountDateValidation"/>
+          <include name="testNegativeOpeningBalance"/>
+          <include name="accountLastUpdatedDateValidation"/>
+          <include name="beforeMethodInBrowserDashboard"/>
+          <include name="accountNameValidation"/>
+          <include name="beforeTestInBaseTest"/>
+        </methods>
+      </class> <!-- twg.entaxy.tests.BrowserDashboardTest -->
+      <class name="twg.entaxy.tests.LandingPageTest">
+        <methods>
+          <include name="testFeedbackEmail"/>
+          <include name="beforeMethodInLandingPage"/>
+        </methods>
+      </class> <!-- twg.entaxy.tests.LandingPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
